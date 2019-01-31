@@ -6,8 +6,14 @@ public class Recursion{
      *precondition: n is non-negative
 
     */
+    private static double sqrt(double n, double guess, double tolerance) {
+      if (Math.abs((guess*guess-n)/(n)) <= tolerance)
+        return guess;
+      else
+        return sqrt(n, (n/guess + guess) / 2.0);
+    }
     public static double sqrt(double n, double tolerance){
-
+      return sqrt(n,n,tolerance);
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
@@ -15,11 +21,11 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
     }
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
+
     }
 
 }
