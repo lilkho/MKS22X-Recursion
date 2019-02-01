@@ -29,11 +29,12 @@ public class Recursion{
     public static int fib(int n){
       return fib(n,1,1);
     }
-
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> sums = new ArrayList<Integer>();
+      if (n>0) {
 
+      }
       return sums;
     }
 
