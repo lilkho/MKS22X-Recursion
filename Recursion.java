@@ -39,7 +39,8 @@ public class Recursion{
         makeAllSums(n-1,partial,sums);
       }
     }
-    public static ArrayList<Integer> makeAllSums(int n){
+    public static ArrayList<Integer> makeAllSums(int n) {
+      if (n<0) throw new IllegalArgumentException();
       ArrayList<Integer> sums = new ArrayList<Integer>();
       makeAllSums(n,0,sums);
       return sums;
