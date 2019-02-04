@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion{
     /*You may write additional private methods */
 
@@ -30,11 +32,16 @@ public class Recursion{
       return fib(n,1,1);
     }
     /*As Per classwork*/
+    private static void makeAllSums(int n, int partial, ArrayList<Integer> sums) {
+      if (n==0) sums.add(partial);
+      else {
+        makeAllSums(n-1,partial+n,sums);
+        makeAllSums(n-1,partial,sums);
+      }
+    }
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> sums = new ArrayList<Integer>();
-      if (n>0) {
-
-      }
+      makeAllSums(n,0,sums);
       return sums;
     }
 
@@ -43,6 +50,7 @@ public class Recursion{
       System.out.println(sqrt(64,.0000000001));
       for (int i=0;i<10;i++)
         System.out.println(fib(i));
-
+      System.out.println(makeAllSums(3));
+      System.out.println(makeAllSums(4));
     }
 }
