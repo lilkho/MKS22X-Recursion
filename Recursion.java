@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Recursion{
+public class recursion{
     /*You may write additional private methods */
 
     /*Recursively find the sqrt using Newton's approximation
@@ -15,6 +15,7 @@ public class Recursion{
         return sqrt(n, (n/guess + guess) / 2.0, tolerance);
     }
     public static double sqrt(double n, double tolerance){
+      if (n<0) throw new IllegalArgumentException();
       return sqrt(n,n,tolerance);
     }
 
@@ -46,12 +47,4 @@ public class Recursion{
       return sums;
     }
 
-    public static void main(String[] args) {
-      System.out.println(sqrt(64,.00001));
-      System.out.println(sqrt(64,.0000000001));
-      for (int i=0;i<10;i++)
-        System.out.println(fib(i));
-      System.out.println(makeAllSums(3));
-      System.out.println(makeAllSums(4));
-    }
 }
